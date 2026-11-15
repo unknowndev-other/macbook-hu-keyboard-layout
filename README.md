@@ -38,6 +38,10 @@ Use a standard Hungarian Windows (PC) keyboard on a Mac with the familiar Window
 1. Install Karabiner-Elements and grant the permissions it asks for.
 2. Copy `karabiner-hungarian-windows-keyboard.json` to `~/.config/karabiner/assets/complex_modifications/`.
 3. In Karabiner-Elements, go to **Complex Modifications → Add predefined rule** and enable all four rules, rule 1 first.
+4. Go to **Settings → Devices** and make sure **Modify events** is turned on for your external keyboard.
+   - If several devices are listed, check that you enabled the right one.
+   - Wireless receivers (for example Logitech Unifying or Bolt) are often off by default.
+   - If this is off, none of the rules will work.
 
 ## 5. Notes
 

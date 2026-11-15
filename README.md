@@ -42,8 +42,9 @@ Use a standard Hungarian Windows (PC) keyboard on a Mac with the familiar Window
    - If several devices are listed, check that you enabled the right one.
    - Wireless receivers (for example Logitech Unifying or Bolt) are often off by default.
    - If this is off, none of the rules will work.
+5. In the Karabiner-Elements settings, turn on the **Swap IS layout-specific keys** option.
 
 ## 5. Notes
 
-- If `0` and `í` are swapped on your keyboard, go to **System Settings → Keyboard → Change Keyboard Type** and try the other keyboard type.
+- If `0` and `í` are swapped on your keyboard, check the **Swap ISO…** option in Karabiner-Elements (step 5 above). While Karabiner is active, the macOS *Change Keyboard Type* setting has no effect on this.
 - The Karabiner rules only affect external keyboards. The built-in MacBook keyboard is not changed.

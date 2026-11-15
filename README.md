@@ -6,6 +6,7 @@
 - [4. Installation](#4-installation)
   - [4.1. Keyboard layout](#41-keyboard-layout)
   - [4.2. Karabiner rules](#42-karabiner-rules)
+  - [4.3. VS Code settings](#43-vs-code-settings)
 - [5. Notes](#5-notes)
 
 ## 1. Summary
@@ -41,7 +42,30 @@ Use a standard Hungarian Windows (PC) keyboard on a Mac with the familiar Window
    - If several devices are listed, check that you enabled the right one.
    - Wireless receivers (for example Logitech Unifying or Bolt) are often off by default.
    - If this is off, none of the rules will work.
-5. In the Karabiner-Elements settings, turn on the **Swap IS layout-specific keys** option.
+5. In the Karabiner-Elements settings, turn on the **Swap ISO layout-specific keys** option.
+   - Without it, `0` and `í` are swapped on the external keyboard once Karabiner is active.
+
+### 4.3. VS Code settings
+
+**Find and replace (ctrl + h):**
+
+*macOS* uses **cmd (ctrl) + h** to hide the app. Go to **System Settings → Keyboard → Keyboard Shortcuts… → App Shortcuts → +** and set:
+
+- **Application:** Visual Studio Code
+- **Menu Title:** `Hide Visual Studio Code` (must match exactly)
+- **Keyboard Shortcut:** something unused, for example Ctrl+Option+Cmd+H
+
+Open **Preferences: Open Keyboard Shortcuts (JSON)** in VS Code from the Command Palette (Ctrl+Shift+P) and add these entries for Windows-like behavior:
+
+```json
+[
+  {
+    "key": "cmd+h",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  }
+]
+```
 
 ## 5. Notes
 

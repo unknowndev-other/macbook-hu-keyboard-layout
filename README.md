@@ -6,7 +6,8 @@
 - [4. Installation](#4-installation)
   - [4.1. Keyboard layout](#41-keyboard-layout)
   - [4.2. Karabiner rules](#42-karabiner-rules)
-  - [4.3. VS Code settings](#43-vs-code-settings)
+  - [4.3. Function keys (F1–F12)](#43-function-keys-f1f12)
+  - [4.4. VS Code settings](#44-vs-code-settings)
 - [5. Notes](#5-notes)
 
 ## 1. Summary
@@ -45,7 +46,15 @@ Use a standard Hungarian Windows (PC) keyboard on a Mac with the familiar Window
 5. In the Karabiner-Elements settings, turn on the **Swap ISO layout-specific keys** option.
    - Without it, `0` and `í` are swapped on the external keyboard once Karabiner is active.
 
-### 4.3. VS Code settings
+### 4.3. Function keys (F1–F12)
+
+By default, Karabiner treats the external keyboard's F-keys like the MacBook's: F1 changes brightness, and you need fn to get F1. The Fn key on a Windows keyboard is handled inside the keyboard itself and sends nothing to the Mac, so it cannot be used as the Mac fn key. Instead, make the external F-keys work as plain F1–F12, as on Windows:
+
+1. In Karabiner-Elements, open the **Function Keys** tab.
+2. Set **Target device** to your external keyboard.
+3. Map every key to itself: `f1` → `f1`, `f2` → `f2`, … `f12` → `f12`.
+
+### 4.4. VS Code settings
 
 **Find and replace (ctrl + h):**
 
@@ -70,4 +79,5 @@ Open **Preferences: Open Keyboard Shortcuts (JSON)** in VS Code from the Command
 ## 5. Notes
 
 - If `0` and `í` are swapped on your keyboard, check the **Swap ISO…** option in Karabiner-Elements (step 5 above). While Karabiner is active, the macOS *Change Keyboard Type* setting has no effect on this.
+- If you have to hold fn to get F1–F12 on the external keyboard, set up the Function Keys tab for that keyboard (section 4.3).
 - The Karabiner rules only affect external keyboards. The built-in MacBook keyboard is not changed.
